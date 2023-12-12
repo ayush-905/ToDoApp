@@ -3,12 +3,7 @@ import { useDispatch } from 'react-redux'
 import { createTask } from '../features/tasks/taskSlice'
 import Select from 'react-select';
 import { toast } from 'react-toastify';
-
-const options = [
-  { value: 'low', label: 'Low' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'high', label: 'High' },
-]
+import { options } from '../utils/helper';
 
 function AddTask() {
   const [text, setText] = useState('')

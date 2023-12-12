@@ -2,12 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTask, updateTask } from '../features/tasks/taskSlice';
 import Select from 'react-select'
-
-const options = [
-  { value: 'low', label: 'Low' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'high', label: 'High' },
-]
+import { options } from '../utils/helper';
 
 const TaskItem = ({ task,onEdit }) => {
   const dispatch = useDispatch();
@@ -25,7 +20,7 @@ const TaskItem = ({ task,onEdit }) => {
 
   const [isEditing, setIsEditing] = useState(false);
   const [editedTask, setEditedTask] = useState( task.name );
-  const [selectedOption, setSelectedOption] = useState(task.status);
+  const [selectedOption, setSelectedOption] = useState({value:task.status, label: task.status});
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -50,6 +45,7 @@ const TaskItem = ({ task,onEdit }) => {
       {isEditing ? (
         <>
           <input
+            className='input'
             type="text"
             name="name"
             value={editedTask}
@@ -58,7 +54,7 @@ const TaskItem = ({ task,onEdit }) => {
           <Select
             className='select'
             key={selectedOption ? selectedOption.value : 'default'}
-            defaultValue={selectedOption}
+            value={selectedOption}
             onChange={setSelectedOption}
             options={options}
             placeholder="Priority"

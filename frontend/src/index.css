@@ -176,7 +176,7 @@ h4{
 }
 .priority{
   margin-top: 0px;
-  color: #f77b7b;
+  color: brown
 }
 .filter{
   width: 30%;
@@ -220,6 +220,15 @@ h4{
   background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+.input{
+  padding : 6px 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @media (max-width: 600px) {
   .form {
     width: 90%;

@@ -7,12 +7,7 @@ import Spinner from './Spinner'
 import AddTask from './AddTask'
 import TaskItem from './TaskItem'
 import Select from 'react-select';
-
-const options = [
-  { value: 'low', label: 'Low' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'high', label: 'High' },
-]
+import { options } from '../utils/helper'
 
 function Dashboard() {
   const navigate = useNavigate()
