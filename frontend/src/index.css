@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width:100vw;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1,
+h2,
+h3,
+h4{
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  margin-left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.right-section {
+  margin-right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px 0px 10px 10px;
+  margin-top: 0px;
+  background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.heading p {
+  color: #828282;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 99%;
+  padding: 10px 0px 10px 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+}
+
+.tasks {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    cursor: pointer;
+    text-align: left !important;
+    position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.card > span{
+  display: flex;
+  gap:20px;
+  padding:10px;
+  padding-top: 0px;
+}
+
+.card > span > h4{
+  margin-top: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  background-color: brown;
+  border-radius: 5px;
+  padding: 0 5px 0;
+  color: white;
+}
+
+.date{
+  padding: 10px;
+}
+.name{
+  margin-top: 0px;
+  color: black;
+}
+.priority{
+  margin-top: 0px;
+  color: #f77b7b;
+}
+.filter{
+  width: 30%;
+  margin: 0px auto 10px;
+
+}
+
+.home{
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.edit{
+  border-radius: 5px;
+  border: none;
+  width:50%;
+  margin: 0 auto;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+  .filter{
+    width: 70%
+  }
+  .logo{
+    margin-left: 0px;
+  }
+  .button{
+    padding: 6px
+  }
+}
