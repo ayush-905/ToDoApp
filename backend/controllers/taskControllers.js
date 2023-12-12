@@ -53,7 +53,8 @@ const updateTask=asyncHandler(async (req,res)=>{
             throw new Error('User not authorized')
         }
 
-        const updatedTask=await Task.update({ name: req.body.name, status: req.body.status },{ where: { id: req.params.id } })
+        await Task.update({ name: req.body.name, status: req.body.status },{ where: { id: req.params.id } })
+        const updatedTask = await Task.findOne({where:{id: req.params.id}}) 
         res.status(200).json(updatedTask)
     }catch(error){
         res.status(500).json({error: error.message})
