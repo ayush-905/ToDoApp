@@ -23,7 +23,7 @@ const getTasks=asyncHandler(async (req,res)=>{
 const setTask=asyncHandler(async (req,res)=>{
     if(!req.body.name|| !req.body.status){
         res.status(400)
-        throw new Error('Please add all fields')
+        throw new Error('Please fill all fields')
     }
 
     try{
