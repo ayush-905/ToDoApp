@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize')
+require('dotenv').config(); 
 const db = {}
-const sequelize = new Sequelize('web', 'root', 'password', {
-  host: 'localhost',
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST || 'localhost',
   dialect: 'mysql',
-  operatorsAliases: false,
+  operatorsAliases: Sequelize.Op,
 
   pool: {
     max: 5,
