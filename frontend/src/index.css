@@ -5,9 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #005AA7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background:  #FDEB71;
   width:100vw;
 }
 
@@ -67,15 +65,11 @@ h4{
 }
 
 .heading {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 0 20px;
   text-align: center;
-}
-
-.heading p {
-  color: #828282;
 }
 
 .form,
@@ -149,24 +143,6 @@ h4{
   background: none;
 }
 
-.card > span{
-  display: flex;
-  gap:20px;
-  padding:10px;
-  padding-top: 0px;
-}
-
-.card > span > h4{
-  margin-top: 10px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  background-color: brown;
-  border-radius: 5px;
-  padding: 0 5px 0;
-  color: white;
-}
-
 .date{
   padding: 10px;
 }
@@ -181,7 +157,6 @@ h4{
 .filter{
   width: 30%;
   margin: 0px auto 10px;
-
 }
 
 .home{
@@ -216,9 +191,7 @@ h4{
   border: none;
   width:50%;
   margin: 0 auto;
-  background: #005AA7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding : 5px 0px;
 }
 .input{
   padding : 6px 10px;
